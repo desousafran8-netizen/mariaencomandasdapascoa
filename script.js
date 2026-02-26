@@ -17,7 +17,7 @@ function enviarPedido() {
     let endereco = document.getElementById("endereco").value;
     let pagamento = document.getElementById("pagamento").value;
 
-    let preco = (tipo === "Recheado") ? "R$20" : "R$15";
+    let preco = (tipo === "Recheado") ? "R$25" : "R$15";
 
     if (tipo !== "Recheado") {
         sabor = "Sem recheio";
@@ -39,4 +39,5 @@ Já lhe respondo.`;
 
     let url = `https://wa.me/${telefone}?text=${mensagem}`;
     window.open(url, "_blank");
+
 }
