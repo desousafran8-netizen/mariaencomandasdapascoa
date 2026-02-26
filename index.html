@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Encomendas de Páscoa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Encomendas de Ovo de Páscoa</h1>
+        <p>Monte seu ovo de Páscoa e envie o pedido pelo WhatsApp da Maria Castro!</p>
+        <img src="ovodesenho.jpg" alt="Ovo de Páscoa"> 
+        <label>Nome:</label>
+        <input type="text" id="nome">
+
+        <label>Tipo de Ovo:</label>
+        <select id="tipo" onchange="mostrarSabores()">
+            <option value="">Selecione</option>
+            <option value="Recheado">Com recheio - R$25,00</option>
+            <option value="Sem recheio">Sem recheio - R$15,00</option>
+        </select>
+
+        <div id="saboresDiv" class="sabores">
+            <label>Sabor:</label>
+            <select id="sabor">
+                <option value="Maracujá">Maracujá</option>
+                <option value="Prestígio">Prestígio</option>
+                <option value="Brigadeiro">Brigadeiro</option>
+            </select>
+
+            <div class="imagens">
+                <img src="maracuja.jfif" alt="Maracujá">
+                <img src="OvoPrestigio.jfif" alt="Prestígio">
+                <img src="Brigaderia.jfif" alt="Brigadeiro">
+            </div>
+        </div>
+
+        <label>Cidade:</label>
+        <select id="cidade">
+            <option>São João dos Patos</option>
+            <option>Nova Iorque</option>
+            <option>Pastos Bons</option>
+            <option>Sucupira do Norte</option>
+        </select>
+
+        <label>Endereço:</label>
+        <input type="text" id="endereco">
+
+        <label>Pagamento:</label>
+        <select id="pagamento">
+            <option>Pix</option>
+            <option>Dinheiro</option>
+        </select>
+
+        <button onclick="enviarPedido()">Enviar Pedido no WhatsApp</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
